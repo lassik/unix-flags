@@ -4,7 +4,7 @@
 
 (import (scheme base) (scheme char) (scheme file))
 (import (scheme list) (scheme sort) (srfi 13))
-(import (gauche base) (rfc json) (sxml serializer))
+(import (rfc json) (sxml serializer))
 
 (define (write-line s) (write-string s) (newline))
 
