@@ -1,0 +1,51 @@
+{
+  "flags": {
+    "-1": [{ "purpose": "", "os": { "POSIX": true } }],
+    "-A": [{ "purpose": "", "os": { "POSIX": true } }],
+    "-a": [{ "purpose": "", "os": { "POSIX": true } }],
+    "-B": [{ "purpose": "ignore backup files", "os": { "GNU": true } }],
+    "-b": [{ "purpose": "print C-style escapes", "os": { "GNU": true } }],
+    "-C": [{ "purpose": "", "os": { "POSIX": true } }],
+    "-c": [{ "purpose": "", "os": { "POSIX": true } }],
+    "-D": [
+      {
+        "purpose": "Emacs dired output",
+        "os": { "GNU": true }
+      }
+    ],
+    "-d": [{ "purpose": "", "os": { "POSIX": true } }],
+    "-F": [{ "purpose": "", "os": { "POSIX": true } }],
+    "-f": [{ "purpose": "", "os": { "POSIX": true } }],
+    "-g": [{ "purpose": "", "os": { "POSIX": true } }],
+    "-G": [{ "purpose": "omit group names", "os": { "GNU": true } }],
+    "-H": [{ "purpose": "", "os": { "POSIX": true } }],
+    "-h": [{ "purpose": "human-readable", "os": { "GNU": true } }],
+    "-i": [{ "purpose": "", "os": { "POSIX": true } }],
+    "-I": [{ "purpose": "ignore given glob pattern", "os": { "GNU": true } }],
+    "-k": [{ "purpose": "", "os": { "POSIX": true } }],
+    "-L": [{ "purpose": "", "os": { "POSIX": true } }],
+    "-l": [{ "purpose": "", "os": { "POSIX": true } }],
+    "-m": [{ "purpose": "", "os": { "POSIX": true } }],
+    "-n": [{ "purpose": "", "os": { "POSIX": true } }],
+    "-N": [{ "purpose": "print names without quoting", "os": { "GNU": true } }],
+    "-o": [{ "purpose": "", "os": { "POSIX": true } }],
+    "-p": [{ "purpose": "", "os": { "POSIX": true } }],
+    "-Q": [
+      { "purpose": "print names with double quotes", "os": { "POSIX": true } }
+    ],
+    "-q": [{ "purpose": "", "os": { "POSIX": true } }],
+    "-R": [{ "purpose": "", "os": { "POSIX": true } }],
+    "-r": [{ "purpose": "", "os": { "POSIX": true } }],
+    "-S": [{ "purpose": "", "os": { "POSIX": true } }],
+    "-s": [{ "purpose": "", "os": { "POSIX": true } }],
+    "-t": [{ "purpose": "", "os": { "POSIX": true } }],
+    "-T": [{ "purpose": "tab width", "os": { "GNU": true } }],
+    "-u": [{ "purpose": "", "os": { "POSIX": true } }],
+    "-U": [{ "purpose": "do not sort", "os": { "GNU": true } }],
+    "-v": [{ "purpose": "version sort", "os": { "GNU": true } }],
+    "-w": [{ "purpose": "output width", "os": { "GNU": true } }],
+    "-x": [{ "purpose": "", "os": { "POSIX": true } }],
+    "-X": [{ "purpose": "sort by file name extension", "os": { "GNU": true } }],
+    "-Z": [{ "purpose": "print security context", "os": { "GNU": true } }]
+  }
+}

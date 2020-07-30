@@ -4,9 +4,13 @@
 
 (import (scheme base) (scheme char) (scheme file))
 (import (scheme list) (scheme sort) (srfi 13))
-(import (rfc json) (sxml serializer))
+(import (only (file util) directory-list)
+        (only (rfc json) parse-json)
+        (only (sxml serializer) srl:sxml->html))
 
 (define (write-line s) (write-string s) (newline))
+
+(define cmd-dir "cmd/")
 
 (define (list-sort-car less? lis)
   (list-sort (lambda (a b) (less? (car a) (car b)))
@@ -18,11 +22,26 @@
       (string-ci<? a b)))
 
 (define flag<? uppercase-before-lowercase<?)
+(define command<? string-ci<?)
 
 (define (os<? os1 os2)
   (cond ((string=? "POSIX" os1) #t)
         ((string=? "POSIX" os2) #f)
         (else (string-ci<? os1 os2))))
+
+(define (basename->command basename)
+  (and (not (string-prefix? "." basename))
+       (string-suffix? ".json" basename)
+       (substring basename 0 (- (string-length basename)
+                                (string-length ".json")))))
+
+(define (command-names)
+  (list-sort command<?
+             (map basename->command
+                  (filter basename->command
+                          (directory-list cmd-dir)))))
+
+(define (command-json-file command) (string-append cmd-dir command ".json"))
 
 (define (flag-class purposes)
   (cond ((not (= 1 (length purposes)))
@@ -46,7 +65,12 @@
                            purposes)
                ", ")))))
 
-(let ((commands (with-input-from-file "flags.json" parse-json)))
+(let ((commands
+       (map (lambda (command)
+              (cons command
+                    (with-input-from-file (command-json-file command)
+                      parse-json)))
+            (command-names))))
   (with-output-to-file "flags.html"
     (lambda ()
       (write-line
@@ -72,9 +96,9 @@
             (tr (td (@ (class "conflicting"))
                     "Conflicting purposes")))
            ,@(append-map (lambda (command)
-                           (let ((flags (cdr command)))
+                           (let ((flags (cdr (assoc "flags" (cdr command)))))
                              `((h2 ,(car command))
                                (table
                                 ,@(map flag->tr
                                        (list-sort-car flag<? flags))))))
-                         (list-sort-car string-ci<? commands)))))))))
+                         (list-sort-car command<? commands)))))))))

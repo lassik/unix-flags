@@ -1,0 +1,52 @@
+{
+  "flags": {
+    "-4": [{ "purpose": "", "os": { "OpenBSD": true } }],
+    "-6": [{ "purpose": "", "os": { "OpenBSD": true } }],
+    "-C": [{ "purpose": "", "os": { "OpenBSD": true } }],
+    "-c": [{ "purpose": "", "os": { "OpenBSD": true } }],
+    "-D": [{ "purpose": "", "os": { "OpenBSD": true } }],
+    "-d": [{ "purpose": "", "os": { "OpenBSD": true } }],
+    "-e": [
+      {
+        "purpose": "Execute external program when connected",
+        "os": { "netcat-traditional": true }
+      },
+      {
+        "purpose": "Only accept TLS peer certificate if it contains name",
+        "os": { "OpenBSD": true }
+      }
+    ],
+    "-F": [{ "purpose": "", "os": { "OpenBSD": true } }],
+    "-H": [{ "purpose": "", "os": { "OpenBSD": true } }],
+    "-h": [{ "purpose": "", "os": { "OpenBSD": true } }],
+    "-I": [{ "purpose": "", "os": { "OpenBSD": true } }],
+    "-i": [{ "purpose": "", "os": { "OpenBSD": true } }],
+    "-K": [{ "purpose": "", "os": { "OpenBSD": true } }],
+    "-k": [{ "purpose": "", "os": { "OpenBSD": true } }],
+    "-l": [{ "purpose": "", "os": { "OpenBSD": true } }],
+    "-M": [{ "purpose": "", "os": { "OpenBSD": true } }],
+    "-m": [{ "purpose": "", "os": { "OpenBSD": true } }],
+    "-N": [{ "purpose": "", "os": { "OpenBSD": true } }],
+    "-n": [{ "purpose": "", "os": { "OpenBSD": true } }],
+    "-O": [{ "purpose": "", "os": { "OpenBSD": true } }],
+    "-o": [{ "purpose": "", "os": { "OpenBSD": true } }],
+    "-P": [{ "purpose": "", "os": { "OpenBSD": true } }],
+    "-p": [{ "purpose": "", "os": { "OpenBSD": true } }],
+    "-R": [{ "purpose": "", "os": { "OpenBSD": true } }],
+    "-r": [{ "purpose": "", "os": { "OpenBSD": true } }],
+    "-S": [{ "purpose": "", "os": { "OpenBSD": true } }],
+    "-s": [{ "purpose": "", "os": { "OpenBSD": true } }],
+    "-T": [{ "purpose": "", "os": { "OpenBSD": true } }],
+    "-t": [{ "purpose": "", "os": { "OpenBSD": true } }],
+    "-U": [{ "purpose": "", "os": { "OpenBSD": true } }],
+    "-u": [{ "purpose": "", "os": { "OpenBSD": true } }],
+    "-V": [{ "purpose": "", "os": { "OpenBSD": true } }],
+    "-v": [{ "purpose": "", "os": { "OpenBSD": true } }],
+    "-W": [{ "purpose": "", "os": { "OpenBSD": true } }],
+    "-w": [{ "purpose": "", "os": { "OpenBSD": true } }],
+    "-X": [{ "purpose": "", "os": { "OpenBSD": true } }],
+    "-x": [{ "purpose": "", "os": { "OpenBSD": true } }],
+    "-z": [{ "purpose": "", "os": { "OpenBSD": true } }],
+    "-Z": [{ "purpose": "", "os": { "OpenBSD": true } }]
+  }
+}

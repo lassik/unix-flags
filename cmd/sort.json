@@ -1,0 +1,26 @@
+{
+  "flags": {
+    "-b": [{ "purpose": "", "os": { "POSIX": true } }],
+    "-c": [{ "purpose": "", "os": { "POSIX": true } }],
+    "-C": [{ "purpose": "", "os": { "POSIX": true } }],
+    "-d": [{ "purpose": "", "os": { "POSIX": true } }],
+    "-f": [{ "purpose": "", "os": { "POSIX": true } }],
+    "-g": [{ "purpose": "", "os": { "GNU": true } }],
+    "-h": [{ "purpose": "", "os": { "GNU": true } }],
+    "-i": [{ "purpose": "", "os": { "POSIX": true } }],
+    "-k": [{ "purpose": "", "os": { "POSIX": true } }],
+    "-M": [{ "purpose": "", "os": { "GNU": true } }],
+    "-m": [{ "purpose": "", "os": { "POSIX": true } }],
+    "-n": [{ "purpose": "", "os": { "POSIX": true } }],
+    "-o": [{ "purpose": "", "os": { "POSIX": true } }],
+    "-R": [{ "purpose": "", "os": { "GNU": true } }],
+    "-r": [{ "purpose": "", "os": { "POSIX": true } }],
+    "-s": [{ "purpose": "", "os": { "GNU": true } }],
+    "-S": [{ "purpose": "", "os": { "GNU": true } }],
+    "-T": [{ "purpose": "", "os": { "GNU": true } }],
+    "-t": [{ "purpose": "", "os": { "POSIX": true } }],
+    "-u": [{ "purpose": "", "os": { "POSIX": true } }],
+    "-V": [{ "purpose": "", "os": { "GNU": true } }],
+    "-z": [{ "purpose": "", "os": { "GNU": true } }]
+  }
+}
