@@ -16,12 +16,12 @@
   (list-sort (lambda (a b) (less? (car a) (car b)))
              lis))
 
-(define (uppercase-before-lowercase<? a b)
+(define (lowercase-before-uppercase<? a b)
   (if (string-ci=? a b)
-      (string<     a b)
+      (string>?    a b)
       (string-ci<? a b)))
 
-(define flag<? uppercase-before-lowercase<?)
+(define flag<? lowercase-before-uppercase<?)
 (define command<? string-ci<?)
 
 (define (os<? os1 os2)
