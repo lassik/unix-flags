@@ -217,15 +217,16 @@
   },
 
   "xargs": {
-    "-0": [{ "purpose": "", "os": { "DragonFly": true } }],
-    "-E": [{ "purpose": "", "os": { "POSIX": true } }],
-    "-I": [{ "purpose": "", "os": { "POSIX": true } }],
-    "-J": [{ "purpose": "", "os": { "DragonFly": true } }],
+    "-0": [{ "purpose": "", "os": { "DragonFly": true, "NetBSD": true } }],
+    "-E": [{ "purpose": "", "os": { "POSIX": true, "NetBSD": true } }],
+    "-I": [{ "purpose": "", "os": { "POSIX": true, "NetBSD": true } }],
+    "-J": [{ "purpose": "", "os": { "DragonFly": true, "NetBSD": true } }],
     "-L": [
       {
         "purpose": "maximum number of arguments read from stdin (alternate)",
         "os": {
-          "POSIX": true
+          "POSIX": true,
+          "NetBSD": true
         }
       }
     ],
@@ -234,25 +235,27 @@
         "purpose": "maximum number of arguments read from stdin",
         "os": {
           "POSIX": true,
-          "DragonFly": true
+          "DragonFly": true,
+          "NetBSD": true
         }
       }
     ],
-    "-o": [{ "purpose": "", "os": { "DragonFly": true } }],
-    "-P": [{ "purpose": "", "os": { "DragonFly": true } }],
-    "-p": [{ "purpose": "", "os": { "POSIX": true } }],
-    "-R": [{ "purpose": "", "os": { "DragonFly": true } }],
-    "-r": [{ "purpose": "", "os": { "DragonFly": true } }],
+    "-o": [{ "purpose": "", "os": { "DragonFly": true, "NetBSD": true } }],
+    "-P": [{ "purpose": "", "os": { "DragonFly": true, "NetBSD": true } }],
+    "-p": [{ "purpose": "", "os": { "POSIX": true, "NetBSD": true } }],
+    "-R": [{ "purpose": "", "os": { "DragonFly": true, "NetBSD": true } }],
+    "-r": [{ "purpose": "", "os": { "DragonFly": true, "NetBSD": true } }],
     "-S": [
       {
         "purpose": "Space (in bytes) that -I can use for replacements.",
         "os": {
-          "DragonFly": { "version": "5.9", "default": "255" }
+          "DragonFly": { "version": "5.9", "default": "255" },
+          "NetBSD": true
         }
       }
     ],
-    "-s": [{ "purpose": "", "os": { "POSIX": true } }],
-    "-t": [{ "purpose": "", "os": { "POSIX": true } }],
-    "-x": [{ "purpose": "", "os": { "POSIX": true } }]
+    "-s": [{ "purpose": "", "os": { "POSIX": true, "NetBSD": true } }],
+    "-t": [{ "purpose": "", "os": { "POSIX": true, "NetBSD": true } }],
+    "-x": [{ "purpose": "", "os": { "POSIX": true, "NetBSD": true } }]
   }
 }
