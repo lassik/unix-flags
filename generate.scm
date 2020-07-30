@@ -8,6 +8,11 @@
 
 (define (write-line s) (write-string s) (newline))
 
+(define (os<? os1 os2)
+  (cond ((string=? "POSIX" os1) #t)
+        ((string=? "POSIX" os2) #f)
+        (else (string-ci<? os1 os2))))
+
 (define (flag-class purposes)
   (cond ((not (= 1 (length purposes)))
          "conflicting")
@@ -21,7 +26,14 @@
   (let ((flag (car flag-spec))
         (purposes (vector->list (cdr flag-spec))))
     `(tr (td (@ (class ,(string-join `("flag" ,(flag-class purposes)) " ")))
-             ,flag))))
+             ,flag)
+         (td ,(string-join
+               (append-map (lambda (purpose)
+                             (let ((os-list
+                                    (map car (cdr (assoc "os" purpose)))))
+                               (list-sort os<? os-list)))
+                           purposes)
+               ", ")))))
 
 (let ((commands (with-input-from-file "flags.json" parse-json)))
   (with-output-to-file "flags.html"
