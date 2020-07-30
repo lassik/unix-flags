@@ -3,7 +3,7 @@
 ;;; Turn the JSON database into a HTML page.
 
 (import (scheme base) (scheme char) (scheme file))
-(import (scheme list) (scheme sort))
+(import (scheme list) (scheme sort) (srfi 13))
 (import (gauche base) (rfc json) (sxml serializer))
 
 (define (write-line s) (write-string s) (newline))
@@ -19,7 +19,7 @@
            "nonposix"))))
 
 (define (flag->td flag)
-  `(td (@ (class ,(flag-class flag)))
+  `(td (@ (class ,(string-join `("flag" ,(flag-class flag)) " ")))
        ,(car flag)))
 
 (let ((commands (with-input-from-file "flags.json" parse-json)))
@@ -33,6 +33,7 @@
            (style ,(string-append
                     "body { font-family: sans-serif; }"
                     "table, tr, td { border: 1px solid black; }"
+                    "td.flag { font-family: monospace; font-weight: bold; }"
                     ".posix { background-color: lightgreen; }"
                     ".nonposix { background-color: gainsboro; }"
                     ".conflicting { background-color: pink; }"
