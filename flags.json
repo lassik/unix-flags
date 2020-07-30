@@ -217,6 +217,10 @@
   },
 
   "xargs": {
+    "-0": [{ "purpose": "", "os": { "DragonFly": true } }],
+    "-E": [{ "purpose": "", "os": { "POSIX": true } }],
+    "-I": [{ "purpose": "", "os": { "POSIX": true } }],
+    "-J": [{ "purpose": "", "os": { "DragonFly": true } }],
     "-L": [
       {
         "purpose": "maximum number of arguments read from stdin (alternate)",
@@ -234,6 +238,11 @@
         }
       }
     ],
+    "-o": [{ "purpose": "", "os": { "DragonFly": true } }],
+    "-P": [{ "purpose": "", "os": { "DragonFly": true } }],
+    "-p": [{ "purpose": "", "os": { "POSIX": true } }],
+    "-R": [{ "purpose": "", "os": { "DragonFly": true } }],
+    "-r": [{ "purpose": "", "os": { "DragonFly": true } }],
     "-S": [
       {
         "purpose": "Space (in bytes) that -I can use for replacements.",
@@ -241,6 +250,9 @@
           "DragonFly": { "version": "5.9", "default": "255" }
         }
       }
-    ]
+    ],
+    "-s": [{ "purpose": "", "os": { "POSIX": true } }],
+    "-t": [{ "purpose": "", "os": { "POSIX": true } }],
+    "-x": [{ "purpose": "", "os": { "POSIX": true } }]
   }
 }
