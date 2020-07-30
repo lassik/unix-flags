@@ -8,19 +8,20 @@
 
 (define (write-line s) (write-string s) (newline))
 
-(define (flag-class flag)
-  (let ((purposes (vector->list (cdr flag))))
-    (cond ((not (= 1 (length purposes)))
-           "conflicting")
-          ((let ((purpose (car purposes)))
-             (not (not (assoc "POSIX" (cdr (assoc "os" purpose))))))
-           "posix")
-          (else
-           "nonposix"))))
+(define (flag-class purposes)
+  (cond ((not (= 1 (length purposes)))
+         "conflicting")
+        ((let ((purpose (car purposes)))
+           (not (not (assoc "POSIX" (cdr (assoc "os" purpose))))))
+         "posix")
+        (else
+         "nonposix")))
 
-(define (flag->td flag)
-  `(td (@ (class ,(string-join `("flag" ,(flag-class flag)) " ")))
-       ,(car flag)))
+(define (flag->tr flag-spec)
+  (let ((flag (car flag-spec))
+        (purposes (vector->list (cdr flag-spec))))
+    `(tr (td (@ (class ,(string-join `("flag" ,(flag-class purposes)) " ")))
+             ,flag))))
 
 (let ((commands (with-input-from-file "flags.json" parse-json)))
   (with-output-to-file "flags.html"
@@ -51,8 +52,7 @@
                            (let ((flags (cdr command)))
                              `((h2 ,(car command))
                                (table
-                                ,@(map (lambda (flag)
-                                         `(tr ,(flag->td flag)))
+                                ,@(map flag->tr
                                        (list-sort (lambda (flag1 flag2)
                                                     (string-ci<? (car flag1)
                                                                  (car flag2)))
