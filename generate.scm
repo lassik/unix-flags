@@ -8,6 +8,17 @@
 
 (define (write-line s) (write-string s) (newline))
 
+(define (list-sort-car less? lis)
+  (list-sort (lambda (a b) (less? (car a) (car b)))
+             lis))
+
+(define (uppercase-before-lowercase<? a b)
+  (if (string-ci=? a b)
+      (string<     a b)
+      (string-ci<? a b)))
+
+(define flag<? uppercase-before-lowercase<?)
+
 (define (os<? os1 os2)
   (cond ((string=? "POSIX" os1) #t)
         ((string=? "POSIX" os2) #f)
@@ -65,8 +76,5 @@
                              `((h2 ,(car command))
                                (table
                                 ,@(map flag->tr
-                                       (list-sort (lambda (flag1 flag2)
-                                                    (string-ci<? (car flag1)
-                                                                 (car flag2)))
-                                                  flags))))))
-                         commands))))))))
+                                       (list-sort-car flag<? flags))))))
+                         (list-sort-car string-ci<? commands)))))))))
