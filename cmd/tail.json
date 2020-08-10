@@ -1,0 +1,39 @@
+{
+  "flags": {
+    "-A": [{ "purpose": "", "os": { "GNU": true } }],
+    "-b": [
+      {
+        "purpose": "",
+        "os": { "DragonFly": true, "FreeBSD": true, "OpenBSD": true }
+      }
+    ],
+    "-c": [{ "purpose": "", "os": { "BusyBox": true, "POSIX": true } }],
+    "-E": [{ "purpose": "", "os": { "GNU": true } }],
+    "-e": [{ "purpose": "", "os": { "GNU": true } }],
+    "-F": [
+      {
+        "purpose": "",
+        "os": { "DragonFly": true, "FreeBSD": true, "NetBSD": true }
+      }
+    ],
+    "-f": [{ "purpose": "", "os": { "BusyBox": true, "POSIX": true } }],
+    "-n": [{ "purpose": "", "os": { "BusyBox": true, "POSIX": true } }],
+    "-q": [
+      {
+        "purpose": "",
+        "os": { "BusyBox": true, "DragonFly": true, "FreeBSD": true }
+      }
+    ],
+    "-r": [
+      {
+        "purpose": "",
+        "os": { "DragonFly": true, "FreeBSD": true, "OpenBSD": true }
+      }
+    ],
+    "-s": [{ "purpose": "", "os": { "BusyBox": true, "GNU": true } }],
+    "-T": [{ "purpose": "", "os": { "GNU": true } }],
+    "-t": [{ "purpose": "", "os": { "GNU": true } }],
+    "-u": [{ "purpose": "", "os": { "GNU": true } }],
+    "-v": [{ "purpose": "", "os": { "BusyBox": true, "DragonFly": true } }]
+  }
+}
