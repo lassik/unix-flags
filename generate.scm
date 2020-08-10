@@ -3,14 +3,14 @@
 ;;; Turn the JSON database into a HTML page.
 
 (import (scheme base) (scheme char) (scheme file))
-(import (scheme list) (scheme sort) (srfi 13))
+(import (scheme list) (scheme sort) (srfi 13) (srfi 193))
 (import (only (file util) directory-list)
         (only (rfc json) parse-json)
         (only (sxml serializer) srl:sxml->html))
 
 (define (write-line s) (write-string s) (newline))
 
-(define cmd-dir "cmd/")
+(define cmd-dir (string-append (script-directory) "cmd/"))
 
 (define (list-sort-car less? lis)
   (list-sort (lambda (a b) (less? (car a) (car b)))
@@ -41,7 +41,8 @@
                   (filter basename->command
                           (directory-list cmd-dir)))))
 
-(define (command-json-file command) (string-append cmd-dir command ".json"))
+(define (command-json-file command)
+  (string-append cmd-dir command ".json"))
 
 (define (flag-class purposes)
   (cond ((not (= 1 (length purposes)))
@@ -71,7 +72,7 @@
                     (with-input-from-file (command-json-file command)
                       parse-json)))
             (command-names))))
-  (with-output-to-file "flags.html"
+  (with-output-to-file (string-append (script-directory) "flags.html")
     (lambda ()
       (write-line
        (srl:sxml->html
