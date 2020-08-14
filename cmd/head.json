@@ -32,9 +32,9 @@
         "purpose": "never write header",
         "os": {
           "BusyBox": true,
+          "DragonFly": true,
           "Minix": true,
-          "NetBSD": true,
-          "DragonFly": true
+          "NetBSD": true
         }
       }
     ],
@@ -43,9 +43,9 @@
         "purpose": "always write header",
         "os": {
           "BusyBox": true,
+          "DragonFly": true,
           "Minix": true,
-          "NetBSD": true,
-          "DragonFly": true
+          "NetBSD": true
         }
       }
     ]
