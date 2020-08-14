@@ -1,0 +1,52 @@
+{
+  "flags": {
+    "-c": [
+      {
+        "purpose": "bytes",
+        "arguments": ["natural"],
+        "os": {
+          "BusyBox": true,
+          "FreeBSD": true,
+          "Minix": true,
+          "NetBSD": true
+        }
+      }
+    ],
+    "-n": [
+      {
+        "purpose": "lines",
+        "arguments": ["natural"],
+        "os": {
+          "BusyBox": true,
+          "FreeBSD": true,
+          "Minix": true,
+          "NetBSD": true,
+          "OpenBSD": true,
+          "POSIX": true
+        }
+      }
+    ],
+    "-q": [
+      {
+        "purpose": "never write header",
+        "os": {
+          "BusyBox": true,
+          "Minix": true,
+          "NetBSD": true,
+          "DragonFly": true
+        }
+      }
+    ],
+    "-v": [
+      {
+        "purpose": "always write header",
+        "os": {
+          "BusyBox": true,
+          "Minix": true,
+          "NetBSD": true,
+          "DragonFly": true
+        }
+      }
+    ]
+  }
+}
