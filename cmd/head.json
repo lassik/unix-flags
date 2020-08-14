@@ -22,7 +22,8 @@
           "Minix": true,
           "NetBSD": true,
           "OpenBSD": true,
-          "POSIX": true
+          "POSIX": true,
+          "Solaris": true
         }
       }
     ],
