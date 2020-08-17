@@ -1,0 +1,189 @@
+{
+  "flags": {
+    "-@": [
+      {
+        "os": {
+          "Solaris": true
+        }
+      }
+    ],
+    "-a": [
+      {
+        "os": {
+          "BusyBox": true,
+          "DragonFly": true,
+          "FreeBSD": true,
+          "Minix": true,
+          "NetBSD": true,
+          "OpenBSD": true
+        }
+      }
+    ],
+    "-d": [
+      {
+        "os": {
+          "BusyBox": true
+        }
+      }
+    ],
+    "-f": [
+      {
+        "os": {
+          "BusyBox": true,
+          "DragonFly": true,
+          "FreeBSD": true,
+          "Minix": true,
+          "NetBSD": true,
+          "OpenBSD": true,
+          "POSIX": true,
+          "Solaris": true
+        }
+      }
+    ],
+    "-H": [
+      {
+        "os": {
+          "BusyBox": true,
+          "DragonFly": true,
+          "FreeBSD": true,
+          "Minix": true,
+          "NetBSD": true,
+          "OpenBSD": true,
+          "POSIX": true,
+          "Solaris": true
+        }
+      }
+    ],
+    "-i": [
+      {
+        "os": {
+          "BusyBox": true,
+          "DragonFly": true,
+          "FreeBSD": true,
+          "Minix": true,
+          "NetBSD": true,
+          "OpenBSD": true,
+          "POSIX": true,
+          "Solaris": true
+        }
+      }
+    ],
+    "-L": [
+      {
+        "os": {
+          "BusyBox": true,
+          "DragonFly": true,
+          "FreeBSD": true,
+          "Minix": true,
+          "NetBSD": true,
+          "OpenBSD": true,
+          "POSIX": true,
+          "Solaris": true
+        }
+      }
+    ],
+    "-l": [
+      {
+        "os": {
+          "BusyBox": true,
+          "DragonFly": true,
+          "FreeBSD": true,
+          "Minix": true,
+          "NetBSD": true
+        }
+      }
+    ],
+    "-N": [
+      {
+        "os": {
+          "Minix": true,
+          "NetBSD": true
+        }
+      }
+    ],
+    "-n": [
+      {
+        "os": {
+          "DragonFly": true,
+          "FreeBSD": true
+        }
+      }
+    ],
+    "-P": [
+      {
+        "os": {
+          "BusyBox": true,
+          "DragonFly": true,
+          "FreeBSD": true,
+          "Minix": true,
+          "NetBSD": true,
+          "OpenBSD": true,
+          "POSIX": true,
+          "Solaris": true
+        }
+      }
+    ],
+    "-p": [
+      {
+        "os": {
+          "BusyBox": true,
+          "DragonFly": true,
+          "FreeBSD": true,
+          "Minix": true,
+          "NetBSD": true,
+          "OpenBSD": true,
+          "POSIX": true
+        }
+      }
+    ],
+    "-R": [
+      {
+        "os": {
+          "BusyBox": true,
+          "DragonFly": true,
+          "FreeBSD": true,
+          "Minix": true,
+          "NetBSD": true,
+          "OpenBSD": true,
+          "POSIX": true,
+          "Solaris": true
+        }
+      }
+    ],
+    "-r": [
+      {
+        "os": {
+          "BusyBox": true,
+          "Solaris": true
+        }
+      }
+    ],
+    "-s": [
+      {
+        "os": {
+          "BusyBox": true,
+          "FreeBSD": true
+        }
+      }
+    ],
+    "-v": [
+      {
+        "os": {
+          "DragonFly": true,
+          "FreeBSD": true,
+          "Minix": true,
+          "NetBSD": true,
+          "OpenBSD": true
+        }
+      }
+    ],
+    "-x": [
+      {
+        "os": {
+          "DragonFly": true,
+          "FreeBSD": true
+        }
+      }
+    ]
+  }
+}
