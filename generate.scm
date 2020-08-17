@@ -72,7 +72,7 @@
                     (with-input-from-file (command-json-file command)
                       parse-json)))
             (command-names))))
-  (with-output-to-file (string-append (script-directory) "flags.html")
+  (with-output-to-file (string-append (script-directory) "unix-flags.html")
     (lambda ()
       (write-line
        (srl:sxml->html
